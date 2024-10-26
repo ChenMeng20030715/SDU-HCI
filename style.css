@@ -1,0 +1,38 @@
+.rating-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.slider-container {
+    width: 200px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border: 2px solid #ccc !important; /* 添加边框样式 */
+    border-radius: 5px;
+    background: #fff; /* 修改背景颜色 */
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4caf50;
+    cursor: pointer;
+}
+
+#slider-value {
+    display: block;
+    font-size: 24px;
+}
