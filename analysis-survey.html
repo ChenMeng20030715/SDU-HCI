@@ -1,0 +1,619 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>天天向上</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src="assets/js/echarts.min.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">天天向上</a>
+					</header>
+                    
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">团队介绍</a></li>
+							<li><a href="generic.html">项目提案</a></li>
+							<li><a href="plan.html">数据收集</a></li>
+							<li class="active"><a href="analysis.html">Data Analysis</a></li>
+							<li><a href="feedback.html">Critique Feedback</a></li>
+						</ul>
+						<ul class="icons">
+							<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+							<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+							<!-- <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> 
+							<li><a href="https://github.com/Kenyank1dd/2023-SDU-HCI-Project_Website" class="icon brands fa-github"><span class="label">GitHub</span></a></li>-->
+						</ul>
+					</nav>
+				<!-- Main -->
+					<div id="main">
+						<ul class="actions">
+							<li><a href="analysis.html" class="button">interview data analysis</a></li>
+							<li><a href="analysis-survey.html" class="button primary">survey data analysis</a></li>
+						</ul>
+						<!-- Post -->
+						<section class="post">
+							<h2>Demographic Data</h2>
+							<div class="row">
+								<div class="col-6 col-12-small">
+									<h3>User age</h3>
+									<p>60 岁以下: 1 user<br>
+										60 - 70 岁: 4 users<br>
+										70 - 80 岁: 3 users<br>
+										80 岁以上: 1 user<br>
+										45-54: 1 user<br>
+										55-64: 0 users<br>
+										65+: 0 users<br></p>
+
+									<h3>Employment Status</h3>
+									<p>Employed: 4 users<br>
+										Unemployed: 1 user<br>
+										Student: 3 users<br>
+										Retired: 1 user<br>
+										Other (please specify): 1 user<br>
+										</p>
+
+									<h3>Frequency of users using banking apps</h3>
+									<p>Rarely: 1 user<br>
+										Occasionally: 2 users<br>
+										Regularly: 2 users<br>
+										Daily: 5 users<br>
+										</p>
+
+									<h3>Consider the importance of UI</h3>
+									<p>Very Important: 3 users<br>
+										Important: 3 users<br>
+										Neutral: 3 users<br>
+										Not Important: 1 user<br>
+										Very Unimportant: 0 users<br>
+										</p>
+									
+									<h3>important Security features</h3>
+									<p>Double Factor Authentication: Mentioned by 4 users<br>
+										Data Encryption: Mentioned by 2 users<br>
+										Real-time Transaction Notifications: Mentioned by 1 user<br>
+										Limiting High-risk or Abnormal Transactions: Mentioned by 1 user<br>
+										Device Authorization Management: Mentioned by 1 user<br>
+										</p>
+								</div>
+								<div class="col-6 col-12-small">
+									<h3>User gender</h3>
+									<p>Male: 5 users<br>
+										Female: 3 users<br>
+										Non-binary: 0 users<br>
+										Prefer not to say: 0 users<br>
+									Other (please specify): 2 users<br>
+									<br>
+									<br></p>
+
+									<h3>User Education Level</h3>
+									<p>High School or less: 2 user<br>
+										Some College or Associate's Degree: 2 user<br>
+										Bachelor's Degree: 5 users<br>
+										Master's Degree or higher: 1 users<br>
+									<br>
+									</p>
+
+									<h3>The three most important app features</h3>
+									<p>Account Balance Inquiry<br>
+										Transfer Functionality<br>
+										Transaction Record Viewing<br>
+										<br>
+										</p>
+
+									<h3>Satisfaction with the current app
+									</h3>
+									<p>Very Satisfied: 2 users<br>
+										Satisfied: 4 users<br>
+										Neutral: 2 users<br>
+										Unsatisfied: 1 user<br>
+										Very Unsatisfied: 1 user<br>
+										</p>
+
+									<h3>Suggestions for Security Enhancement</h3>
+									<p>Providing clear privacy policies and terms (mentioned by 2 users)<br>
+										Proactively notifying users about security vulnerabilities and updates (mentioned by 2 users)<br>
+										Strengthening user authentication processes (mentioned by 3 users)<br>
+										Implementing device fingerprint technology and behavior analysis algorithms (mentioned by 1 user)<br>
+										</p>
+								</div>
+							</div>
+
+							<hr />
+
+							<h2>visualization</h2>
+							<div class="row">
+								<div class="col-6 col-12-small">
+
+									<h3>用户年龄分布</h3>
+									<div id="bar-graph" style="width: 540px;height:400px;"></div>
+
+									<p></br></p>
+
+									<h3>用户教育程度比例</h3>
+									<div id="pie-graph2" style="width: 540px;height:400px;"></div>
+
+									<p></br></p>
+
+									<h3>用户移动银行APP使用频率</h3>
+									<div id="line-graph" style="width: 540px;height:400px;"></div>
+
+									<h3>用户对新APP态度的相关调查</h3>
+									<div id="boxplot-graph" style="width: 540px;height:400px;"></div>
+
+								</div>
+								<div class="col-6 col-12-small">
+
+									<h3>用户性别比例</h3>
+									<div id="pie-graph" style="width: 540px;height:400px;"></div>
+
+									<p></br></p>
+
+									<h3>用户就业状况</h3>
+									<div id="bar-graph2" style="width: 540px;height:400px;"></div>
+
+									<p></br></p>
+
+									<h3>用户对移动银行应用信任度和年龄关系</h3>
+									<div id="scatter-graph" style="width: 540px;height:400px;"></div>
+
+
+									<h3>用户认为重要的银行APP功能</h3>
+									<img src="images/ciyun.png" alt="" />
+								</div>
+							</div>
+							<hr />
+							<h2>findings</h2>
+							<p>从收集到的数据以及所作的相应可视化后，我们得出了以下一些发现：</p>
+							<ul>
+								<li>大多数用户的年龄在 18 至 34 岁之间，受教育程度和就业状况各不相同。</li>
+								<li>用户使用手机银行应用程序的频率各不相同，相当一部分用户每天都使用该应用程序。</li>
+								<li>用户普遍重视账户余额查询、转账功能和交易记录查看等主要功能</li>
+								<li>用户友好的界面对大多数人来说都很重要，但对这方面的重视程度存在一定差异。</li>
+								<li>用户似乎对目前的手机银行应用程序相当满意，但仍有改进的余地。</li>
+								<li>双因素身份验证和数据加密等安全功能受到用户的高度重视。</li>
+								<li>用户对手机银行应用程序的信任度普遍处于中上水平，平均信任度为 3.6</li>
+								<li>用户对生物识别身份验证方法的满意度普遍较高。</li>
+								<li>相当一部分用户表示，如果某个手机银行应用程序得到了信誉良好的金融机构或银行的认可或与之合作，他们会更倾向于使用该应用程序。</li>
+							</ul>
+							<p>根据我们收集得到的survey数据所示，潜在用户在调研过程中强调了安全性、用户友好的UI界面和建立信任措施在开发成功的手机银行应用程序中的重要性。
+								此外，根据我们对不同年龄段潜在用户的调研发现，在应用开发的过程中，还必须考虑到从青年学生到退休人员等用户群的不同偏好和需求，比如年轻用户更注重于
+								应用的便捷性，年老的用户更注重于应用的安全可靠性，综合考虑不同年龄段的用户需求，以创建一个全面、包容的应用程序。</p>
+						</section>		
+					</div>			
+
+			</div>
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+            <!-- 柱状图 -->
+            <script type="text/javascript">
+                var chartDom = document.getElementById('bar-graph');
+                var myChart = echarts.init(chartDom);
+                var option;
+
+                option = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                    type: 'shadow'
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: [
+                    {
+                    type: 'category',
+                    data: ['60 岁以下', '60 - 70 岁', '70 - 80 岁', '80 岁以上', '45-54', '55-64', '65+'],
+                    axisTick: {
+                        alignWithLabel: true
+                    }
+                    }
+                ],
+                yAxis: [
+                    {
+                    type: 'value'
+                    }
+                ],
+                series: [
+                    {
+                    name: 'Direct',
+                    type: 'bar',
+                    barWidth: '60%',
+                    data: [1, 4, 3, 1, 1, 0, 0]
+                    }
+                ],
+                toolbox: {
+                    show: true,
+                    orient: 'vertical',
+                    left: 'right',
+                    top: 'center',
+                    feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    magicType: { show: true, type: ['line', 'bar'] },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                    }
+                }
+                };
+
+                option && myChart.setOption(option);
+            </script>
+
+			<script type="text/javascript">
+				var chartDom = document.getElementById('pie-graph');
+				var myChart = echarts.init(chartDom);
+				var option;
+
+				option = {
+				toolbox: {
+					show: true,
+					orient: 'vertical',
+					left: 'right',
+					top: 'center',
+					feature: {
+					mark: { show: true },
+					dataView: { show: true, readOnly: false },
+					saveAsImage: { show: true }
+					}
+				},
+				tooltip: {
+					trigger: 'item'
+				},
+				legend: {
+					top: '5%',
+					left: 'center'
+				},
+				series: [
+					{
+					name: 'Access From',
+					type: 'pie',
+					radius: ['40%', '70%'],
+					avoidLabelOverlap: false,
+					itemStyle: {
+						borderRadius: 10,
+						borderColor: '#fff',
+						borderWidth: 2
+					},
+					label: {
+						show: false,
+						position: 'center'
+					},
+					emphasis: {
+						label: {
+						show: true,
+						fontSize: 40,
+						fontWeight: 'bold'
+						}
+					},
+					labelLine: {
+						show: false
+					},
+					data: [
+						{ value: 5, name: 'Male' },
+						{ value: 3, name: 'Female' },
+						{ value: 0, name: 'Non-binary' },
+						{ value: 0, name: 'Prefer not to say' },
+						{ value: 2, name: 'Other' }
+					]
+					}
+				]
+				};
+
+				option && myChart.setOption(option);
+			</script>
+
+			<script type="text/javascript">
+				var chartDom = document.getElementById('pie-graph2');
+				var myChart = echarts.init(chartDom);
+				var option;
+
+				option = {
+				toolbox: {
+					show: true,
+					orient: 'vertical',
+					left: 'right',
+					top: 'center',
+					feature: {
+					mark: { show: true },
+					dataView: { show: true, readOnly: false },
+					saveAsImage: { show: true }
+					}
+				},
+				tooltip: {
+					trigger: 'item'
+				},
+				legend: {
+					top: '1%',
+					left: 'center'
+				},
+				series: [
+					{
+					name: 'Access From',
+					type: 'pie',
+					radius: ['40%', '70%'],
+					avoidLabelOverlap: false,
+					itemStyle: {
+						borderRadius: 10,
+						borderColor: '#fff',
+						borderWidth: 2
+					},
+					label: {
+						show: false,
+						position: 'center'
+					},
+					emphasis: {
+						label: {
+						show: true,
+						fontSize: 40,
+						fontWeight: 'bold'
+						}
+					},
+					labelLine: {
+						show: false
+					},
+					data: [
+						{ value: 2, name: 'High School or less' },
+						{ value: 2, name: "Some College or Associate's Degree"},
+						{ value: 5, name: "Bachelor's Degree"},
+						{ value: 1, name: "Master's Degree or higher"},
+					]
+					}
+				]
+				};
+
+				option && myChart.setOption(option);
+			</script>
+
+			<script type="text/javascript">
+				var chartDom = document.getElementById('bar-graph2');
+				var myChart = echarts.init(chartDom);
+				var option;
+
+				option = {
+				tooltip: {
+					trigger: 'axis',
+					axisPointer: {
+					type: 'shadow'
+					}
+				},
+				grid: {
+					left: '3%',
+					right: '4%',
+					bottom: '3%',
+					containLabel: true
+				},
+				xAxis: [
+					{
+					type: 'category',
+					data: ['Employed', 'Unemployed', 'Student', 'Retired', 'Other'],
+					axisTick: {
+						alignWithLabel: true
+					}
+					}
+				],
+				yAxis: [
+					{
+					type: 'value'
+					}
+				],
+				series: [
+					{
+					name: 'Direct',
+					type: 'bar',
+					barWidth: '60%',
+					data: [4,1,3,1,1],
+					color:'rgba(145,204,117)'
+					}
+				],
+				toolbox: {
+					show: true,
+					orient: 'vertical',
+					left: 'right',
+					top: 'center',
+					feature: {
+					mark: { show: true },
+					dataView: { show: true, readOnly: false },
+					magicType: { show: true, type: ['line', 'bar'] },
+					restore: { show: true },
+					saveAsImage: { show: true }
+					}
+				}
+				};
+
+				option && myChart.setOption(option);
+			</script>
+
+			<script>
+				var chartDom = document.getElementById('line-graph');
+				var myChart = echarts.init(chartDom);
+				var option;
+
+				option = {
+				xAxis: {
+					type: 'category',
+					data: ['Rarely', 'Occasionally', 'Regularly', 'Daily']
+				},
+				yAxis: {
+					type: 'value'
+				},
+				series: [
+					{
+					data: [1, 2, 2, 5],
+					type: 'line'
+					}
+				],
+				toolbox: {
+					show: true,
+					orient: 'vertical',
+					left: 'right',
+					top: 'center',
+					feature: {
+					mark: { show: true },
+					dataView: { show: true, readOnly: false },
+					magicType: { show: true, type: ['line', 'bar'] },
+					restore: { show: true },
+					saveAsImage: { show: true }
+					}
+				}
+				};
+
+				option && myChart.setOption(option);
+			</script>
+
+			<script type="text/javascript">
+				var chartDom = document.getElementById('scatter-graph');
+				var myChart = echarts.init(chartDom);
+				var option;
+				
+				option = {
+					xAxis: {
+						name: '年龄'
+					},
+					yAxis: {
+						name: '信任度'
+					},
+				  toolbox: {
+					show: true,
+					orient: 'vertical',
+					left: 'right',
+					top: 'center',
+					feature: {
+					  mark: { show: true },
+					  dataView: { show: true, readOnly: false },
+					  saveAsImage: { show: true }
+					}
+				  },
+				  series: [
+					{
+					  symbolSize: 15,
+					  data: [
+						[40, 4],
+						[20, 3],
+						[60, 4],
+						[30, 4],
+						[30, 3],
+						[20, 4],
+						[20, 5],
+						[15, 3],
+						[50, 3],
+						[20, 3]
+					  ],
+					  type: 'scatter'
+					}
+				  ]
+				};
+				
+				option && myChart.setOption(option);
+			</script>
+
+			<script type="text/javascript">
+				var chartDom = document.getElementById('boxplot-graph');
+				var myChart = echarts.init(chartDom);
+				var option;
+
+				option = {
+				title: [
+					{
+					left: 'center'
+					}
+				],
+				dataset: [
+					{
+					// prettier-ignore
+					source: [
+								[5, 4, 4, 5, 5, 3, 4, 3, 4, 1],
+								[5, 3, 4, 4, 4, 4, 5, 3, 4, 2],
+								[4, 4, 4, 5, 4, 2, 2, 5, 1, 3],
+								[4, 4, 4, 4, 4, 3, 5, 3, 3, 3]
+							]
+					},
+					{
+					transform: {
+						type: 'boxplot'
+					}
+					},
+					{
+					fromDatasetIndex: 1,
+					fromTransformResult: 1
+					}
+				],
+				tooltip: {
+					trigger: 'item',
+					axisPointer: {
+					type: 'shadow'
+					}
+				},
+				grid: {
+					left: '10%',
+					right: '10%',
+					bottom: '15%'
+				},
+				xAxis: {
+					type: 'category',
+					boundaryGap: true,
+					nameGap: 30,
+					splitArea: {
+					show: false
+					},
+					splitLine: {
+					show: false
+					},
+					axisLabel: {
+					formatter: function (value, index) {
+						var labels = [
+						'认为好的\nUI的\n重要性',
+						'对目前\n银行app的\n满意度',
+						'对功能更\n优异的app\n的喜爱度',
+						'对生物身份\n识别的\n接纳度'
+						];
+						return labels[index];
+					}
+					}
+				},
+				yAxis: {
+					type: 'value',
+					splitArea: {
+					show: true
+					}
+				},
+				series: [
+					{
+					name: 'boxplot',
+					type: 'boxplot',
+					datasetIndex: 1
+					}
+				]
+				};
+
+				option && myChart.setOption(option);
+			</script>
+	</body>
+</html>
